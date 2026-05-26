@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body {
+    background: #FFFFFF;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+div#carousel {
+    position: relative;
+    width: 100%;
+    min-height: 46vh;
+    max-height: 628px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 18px;
+    background: linear-gradient(180deg, #e8eefb 0%, #f9fbff 100%);
+    box-shadow: inset 0 0 0 1px rgba(19, 81, 216, 0.12);
+    transition: all .3s ease-in-out;
+}
+
+div#carousel img.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+    display: block;
+}
+
+.carousel-stage {
+    display: grid;
+    gap: 16px;
+    margin: 0 auto;
+    max-width: 1180px;
+    padding: 0 20px;
+}
+
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 14px;
+}
+
+.carousel-button {
+    min-width: 160px;
+    padding: 14px 22px;
+    border: none;
+    border-radius: 999px;
+    color: #fff;
+    font-weight: 700;
+    background: linear-gradient(135deg, #1351d8, #1b357e);
+    cursor: pointer;
+    box-shadow: 0 14px 32px rgba(19, 81, 216, 0.16);
+    transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+}
+
+.carousel-button:hover,
+.carousel-button:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 40px rgba(19, 81, 216, 0.22);
+    outline: none;
+}
+
+.carousel-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 18px 22px;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.62) 100%);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0 0 18px 18px;
+}
+
+.carousel-title-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #1351d8;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(19,81,216,0.15);
+    transition: background .2s ease;
+}
+
+.carousel-title-link:hover {
+    background: rgba(19,81,216,0.08);
+}
+
+div#carousel-title a {
+    text-decoration: none;
+}
+
+div#carousel-title {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+header ul {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+ul {
+	display: inline-block;
+}
+
+header {
+    background: #FFFFFF;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+header div {
+    display: inline;
+    vertical-align: middle;
+}
+
+header nav {
+    display: inline-block;
+    vertical-align: middle;
+    width: 80vw;
+}
+
+header nav a {
+    color: #1351d8;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 900;
+    margin-left: 14px;
+    margin-right: 14px;
+}
+
+header nav a:hover {
+    color: #1b357e;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+nav li {
+    display: inline;
+    list-style: none;
+}
+
+main {
+    min-height: calc(100% - 167px);
+}
+
+nav#social {
+    display: inline;
+    width: 80%;
+}
+
+nav#social ul img {
+    width: 28px;
+}
+
+span.redesociais {
+    color: #ffffff;
+    vertical-align: super;
+}
+
+footer {
+    background: #1B357E;
+    padding: 20px;
+}
+
+footer div {
+    display: inline;
+    float: right;
+    margin-right: 40px;
+}
+
+button:not(.carousel-button):hover,
+button.primary-button:hover {
+    background: #1b357e;
+}
+button {
+    background: #1351d8;
+    color: #fff;
+    border: 0px;
+    border-radius: 10px;
+}
+
+.button-row {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.primary-button {
+    min-width: 200px;
+    padding: 12px 22px;
+    border-radius: 14px;
+    font-weight: 700;
+    letter-spacing: .01em;
+}
+
+@media (max-width: 768px) {
+    .carousel-button {
+        width: 100%;
+        min-width: auto;
+    }
+
+    header nav {
+        width: 100%;
+    }
+}

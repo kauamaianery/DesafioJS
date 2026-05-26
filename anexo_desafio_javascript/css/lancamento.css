@@ -1,0 +1,147 @@
+
+ul.modelcars {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+ul.modelcars li {
+    display: block;
+    text-align: left;
+    width: 300px;
+    vertical-align: top;
+    background: #fff;
+    border-radius: 18px;
+    padding: 16px;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+}
+
+img.photocar {
+    display: block;
+    width: 100%;
+    border-radius: 14px;
+}
+
+.checkbox {
+    width: 28px;
+    height: 28px;
+    border: 2px solid #1b357e;
+    border-radius: 6px;
+    accent-color: #1351d8;
+}
+
+.infocar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.infocar div {
+    display: inline-block;
+}
+
+.info {
+    width: calc(100% - 48px);
+    vertical-align: top;
+}
+
+.textmodel {
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    color: #1351d8;
+    font-weight: 700;
+}
+
+.textprice {
+    display: block;
+    text-align: left;
+    font-size: 12px;
+    color: #333;
+    margin-top: 6px;
+}
+
+.feedback-message {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    padding: 14px 18px;
+    border-radius: 14px;
+    background: #fff1f0;
+    color: #9c1f1f;
+    text-align: center;
+    font-weight: 700;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity .25s ease, transform .25s ease;
+}
+
+.feedback-message.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vh;
+    margin-bottom: 10px;
+}
+  
+th, td {
+    text-align: left;
+    padding: 14px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+td:nth-child(1) {
+    font-weight: 700;
+    width: 40%;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+div#compare {
+    position: fixed;
+    display: none;
+    width: min(90vw, 880px);
+    max-height: 90vh;
+    background: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    padding: 20px;
+    overflow-y: auto;
+    box-shadow: 0 22px 60px rgba(0,0,0,0.18);
+}
+
+.compare-car-image {
+    width: 120px;
+    max-width: 100%;
+    border-radius: 12px;
+}
+
+@media (max-width: 820px) {
+    ul.modelcars li {
+        width: 100%;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    div#compare {
+        width: 95vw;
+        height: auto;
+        max-height: 85vh;
+    }
+}
