@@ -1,5 +1,5 @@
 // classe contato
-class contato {
+class Contato {
 
     constructor(nome, sobrenome, email, telefone, contato) {
 
@@ -20,7 +20,7 @@ function Post(event, form) {
     event.preventDefault();
 
     // cria objeto
-    let data = new contato(
+    let data = new Contato(
 
         form.elements.namedItem("nome").value,
         form.elements.namedItem("sobrenome").value,
@@ -39,4 +39,14 @@ function Post(event, form) {
     // limpa formulário
     form.reset();
 
+    // desabilita botão novamente
+    botaoEnviar.disabled = true;
 }
+
+// habilitar botão ao aceitar termos
+const checkboxTermos = document.getElementById('termos');
+const botaoEnviar = document.getElementById('btnEnviar');
+
+checkboxTermos.addEventListener('change', function () {
+    botaoEnviar.disabled = !this.checked;
+});

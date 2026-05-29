@@ -52,3 +52,7 @@ button {
 .titulo {
     margin-left: 8px;
 }
+#btnEnviar{
+    margin-top: 20px;
+    display: block;
+}
